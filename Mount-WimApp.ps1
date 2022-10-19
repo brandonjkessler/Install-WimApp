@@ -31,7 +31,7 @@ process{
         #-- Try the things
         ##-- Mount the WIM
         Write-Verbose -Message "Now mounting $FilePath at $MountPath."
-        Mount-WindowsImage -ImagePath $FilePath -Path $tempDir -Index 1
+        Mount-WindowsImage -ImagePath $FilePath -Path $MountPath -Index 1
     } catch {
         #-- Catch the error
 	    Write-Error $_.Exception.Message
