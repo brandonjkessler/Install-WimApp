@@ -9,7 +9,7 @@ param(
     [Parameter(Mandatory=$true,HelpMessage='Name of the .wim file.')]
     [string]$Name,
     [Parameter(Mandatory = $false, HelpMessage = 'Path to Save Log Files')]
-    [string]$LogPath = "$env:Windir\Logs"
+    [string]$LogPath = "$PSScriptRoot\Logs"
 
 )
 

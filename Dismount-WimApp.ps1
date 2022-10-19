@@ -4,7 +4,7 @@ param(
     [ValidateScript({Test-Path -Path $_})]
     [string]$MountPath,
     [Parameter(Mandatory = $false, HelpMessage = 'Path to Save Log Files')]
-    [string]$LogPath = "$env:Windir\Logs"
+    [string]$LogPath = "$PSScriptRoot\Logs"
 
 )
 
