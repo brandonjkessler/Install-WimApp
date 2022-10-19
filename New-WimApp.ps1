@@ -31,7 +31,7 @@ process{
     try{
         #-- Try the things
         Write-Verbose -Message "Verifying files are present in $Path."
-        if(((Get-ChildItem -Path "$Path" -File) | Measure-Object).Count -lt 1){
+        if(((Get-ChildItem -Path "$Path" -File -Recurse) | Measure-Object).Count -lt 1){
             Throw "Directory is empty."
         }
 
